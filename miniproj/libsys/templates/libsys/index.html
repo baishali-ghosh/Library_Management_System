@@ -1,0 +1,18 @@
+<html>
+	{% load staticfiles %}
+ <link rel="stylesheet" type="text/css" href="{% static 'libsys/style.css' %}">
+    <body>
+    <h2>MEMBER LOGIN</h2>
+	<form method="POST">
+	{% csrf_token %}
+	<label>
+		<input type="number" name="phonenum" placeholder="Phone Number" > 
+	</label><br>
+	<label>
+		<input type="password" name="password" placeholder="Your Password"> <br>
+	</label>
+	<input type="submit" name="submit" value="Signup"><br>
+	</form>
+	<p>New Member? <a href="signup"  style="color: rgb(115, 207, 255);" >Register here.</a></p>
+	</body>
+</html>

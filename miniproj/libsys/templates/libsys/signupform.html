@@ -1,0 +1,34 @@
+<html>
+	{% load staticfiles %}
+ <link rel="stylesheet" type="text/css" href="{% static 'libsys/style.css' %}">
+	<form action="." method="POST" name="signup form">
+	{% csrf_token %}
+	<label>Firstname
+		{{form.fname}}<br>
+	</label>
+	<label>Middlename
+		{{form.midname}}<br> 
+	</label>
+	<label>LastName 
+		{{form.lname}}<br>
+	</label>
+	<label>Birthday	
+		{{form.bday}}<br>
+	</label>
+	<label>Address	
+		{{form.address}}<br>
+	</label>
+	<label>Age	
+		{{form.age}}<br>
+	<label>Password	
+		{{form.password}}<br>
+	</label>
+	<label>Phone
+		{{form.phone}}<br>
+	</label>
+	<label>Occupation	
+		{{form.occupation}}<br>
+	</label>
+	<input type="submit" name="submit" value="Signup"><br>
+	</form>
+</html>

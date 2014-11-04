@@ -1,0 +1,19 @@
+<html>
+	{% load staticfiles %}
+ 	<link rel="stylesheet" type="text/css" href="{% static 'libsys/style.css' %}">
+    <body>
+    <h2>BOOK BORROWAL</h2>
+	<form method="POST">
+	{% csrf_token %}
+	<label>BookID
+		<input type="text" name="bookie" > 
+	</label><br>
+	<label>MemberID
+		<input type="text" name="mid" > 
+	</label><br>
+	<label>
+		<input type="submit" name="submit" value="Borrow!">
+	</label>
+	</form>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+{% load staticfiles %}
+ <link rel="stylesheet" type="text/css" href="{% static 'libsys/style.css' %}">
+ <body>
+ {% if book_list %}
+    {% for b in book_list %}
+        <p>BookID: {{ b.bid }} </p>
+        <p>Title: {{b.title}} </p>
+        <p>Author: {{b.author}} </p>
+        <p>No.of.copies {{b.noofcopies}}</p>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>No books are available.</p>
+{% endif %}
+ </body>
+ </html>

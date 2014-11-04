@@ -1,0 +1,16 @@
+<html>
+{% load staticfiles %}
+ <link rel="stylesheet" type="text/css" href="{% static 'libsys/style.css' %}">
+ <body>
+ {% if borrow_list %}
+    {% for b in borrow_list %}
+        <p>BookID: {{ b.bookid }} </p>
+        <p>IssueDate: {{b.issuedate}} </p>
+        <p>DueDate: {{b.duedate}}</p>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>No books are borrowed.</p>
+{% endif %}
+ </body>
+ </html>
